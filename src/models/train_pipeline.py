@@ -75,7 +75,7 @@ def run_full_pipeline(ticker="SPY"):
         mlflow.log_artifacts("models", artifact_path="model_bundle")
         
         # 7. Mock Evaluation
-        preds = forecaster.predict_weighted(df_labeled, regime_probs)
+        preds = forecaster.predict_weighted(df_labeled, df_labeled[regime_probs.columns])
         mse = ((preds - df_labeled['target'])**2).mean()
         mlflow.log_metric("mse", mse)
         

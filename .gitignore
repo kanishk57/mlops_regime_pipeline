@@ -20,10 +20,17 @@ venv/
 data/*.parquet
 data/*.csv
 data/*.db
+src/*data/*.csv
+src/*data/*.zip
 outputs/
 models/*.pkl
 models/*.joblib
 !models/.gitkeep
+
+# Logs & Temp
+error_log.txt
+full_output.txt
+*.log
 
 # MLOps
 mlruns/

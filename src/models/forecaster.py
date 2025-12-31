@@ -12,12 +12,15 @@ class RegimeForecaster:
     Forecasting system that uses regime-specific expert models.
     """
     
-    def __init__(self, regimes=['p_high_vol', 'p_trending', 'p_ranging']):
+    def __init__(self, regimes=['p_high_vol', 'p_trending', 'p_ranging'], feature_cols=None):
         self.regimes = regimes
         self.models = {}
-        self.feature_cols = [
-            'log_ret', 'vol_12', 'vol_96', 'roc_20'
-        ]
+        if feature_cols:
+            self.feature_cols = feature_cols
+        else:
+            self.feature_cols = [
+                'log_ret', 'vol_12', 'vol_96', 'roc_20'
+            ]
         
     def train(self, ticker="SPY_15m"):
         """
