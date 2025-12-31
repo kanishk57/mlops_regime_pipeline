@@ -1,0 +1,31 @@
+# Python bytecode only
+__pycache__/
+*.py[cod]
+*.so
+
+# Virtual environments
+env/
+venv/
+.venv/
+.installed.cfg
+*.egg
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+
+# Vs Code
+.vscode/
+
+# Project Data Files
+data/*.parquet
+data/*.csv
+data/*.db
+outputs/
+models/*.pkl
+models/*.joblib
+!models/.gitkeep
+
+# MLOps
+mlruns/
+.feast/
+feature_store/data/

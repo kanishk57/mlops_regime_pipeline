@@ -1,0 +1,13 @@
+pandas
+numpy
+yfinance
+scikit-learn
+hmmlearn
+lightgbm
+mlflow
+feast
+fastapi
+uvicorn
+ta
+matplotlib
+plotly
